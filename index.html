@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuoTech Farma - Sua Farmácia Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icon duotech.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <button class="hamburger-btn" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="nav-logo">
+                    <span>DuoTech Farma</span>
+                </div>
+                
+                <div class="nav-menu desktop-menu">
+                    <a href="#hero" class="nav-link">Início</a>
+                    <a href="#products" class="nav-link">Catálogo</a>
+                    <a href="#ofertas" class="nav-link">Ofertas</a>
+                </div>
+                
+                <div class="nav-search desktop-search">
+                    <input type="text" id="searchInput" placeholder="O que você está procurando hoje?">
+                    <button type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-counter" id="cartCounter">0</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+                <div class="mobile-menu-content">
+                    <div class="mobile-menu-items">
+                        <a href="#hero" class="mobile-menu-item">
+                            <i class="fas fa-home"></i>
+                            <span>Início</span>
+                        </a>
+                        <a href="#products" class="mobile-menu-item">
+                            <i class="fas fa-list"></i>
+                            <span>Catálogo</span>
+                        </a>
+                        <a href="#ofertas" class="mobile-menu-item">
+                            <i class="fas fa-tags"></i>
+                            <span>Ofertas</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="mobile-search-container">
+            <div class="mobile-search">
+                <input type="text" id="mobileSearchInput" placeholder="O que você está procurando hoje?">
+                <button type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Cuidamos da sua <span class="hero-highlight">Saúde</span> com Tecnologia
+            </h1>
+            <p class="hero-description">
+                Medicamentos, vitaminas e produtos de saúde com entrega expressa. 
+                Atendimento farmacêutico especializado e preços que cabem no seu bolso.
+            </p>
+            <button class="hero-cta" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Comprar Agora</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="offers" id="ofertas">
+        <div class="container">
+            <div class="offers-header">
+                <h2>Ofertas Especiais</h2>
+                <p>Aproveite nossas promoções imperdíveis</p>
+            </div>
+            <div class="offers-grid" id="offersContainer">
+            
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products-header">
+                <div class="products-title-section">
+                    <h2>Nossos Produtos</h2>
+                </div>
+                <div class="products-controls">
+                    <div class="category-dropdown">
+                        <button class="category-btn" id="categoryBtn">
+                            <span>Categorias</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="category-menu" id="categoryMenu">
+                            <button class="category-item active" data-category="todos">Todos</button>
+                            <button class="category-item" data-category="analgesicos">Analgésicos</button>
+                            <button class="category-item" data-category="anti-inflamatorios">Anti-inflamatórios</button>
+                            <button class="category-item" data-category="vitaminas">Vitaminas</button>
+                            <button class="category-item" data-category="digestivos">Digestivos</button>
+                            <button class="category-item" data-category="antialergicos">Antialérgicos</button>
+                        </div>
+                    </div>
+                    <div class="sort-controls">
+                        <select id="sortSelect">
+                            <option value="nome">Ordenar por Nome</option>
+                            <option value="menor-preco">Menor Preço</option>
+                            <option value="maior-preco">Maior Preço</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="products-grid" id="productsContainer">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span>DuoTech Farma</span>
+                    </div>
+                    <p class="footer-description">
+                        Sua farmácia online de confiança. Cuidamos da sua saúde com produtos 
+                        de qualidade, preços justos e atendimento especializado.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contatos</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(83) 4002-8922</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>(83) 99999-8888</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@duotechfarma.com.br</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DuoTech Farma. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Carrinho de Compras</h3>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <div class="total-row">
+                        <span>Total: </span>
+                        <span id="cartTotal">R$ 0,00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="shoppingCart.clearCart()">Limpar Carrinho</button>
+                <button class="btn-primary" id="checkoutBtn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductName"></h3>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail">
+                    <div class="product-detail-image-container">
+                        <img id="modalProductImage" src="/placeholder.svg" alt="" class="product-detail-image">
+                    </div>
+                    <div class="product-detail-info">
+                        <p class="product-detail-price" id="modalProductPrice"></p>
+                        <div class="product-detail-category" id="modalProductCategory"></div>
+                        <p class="product-detail-description" id="modalProductDescription"></p>
+                        
+                        <div class="product-detail-features">
+                            <h4>Características:</h4>
+                            <ul id="modalProductFeatures">
+                            </ul>
+                        </div>
+                        
+                        <div class="product-detail-usage">
+                            <h4>Como usar:</h4>
+                            <p id="modalProductUsage"></p>
+                        </div>
+                        
+                        <button class="btn-primary" id="modalAddToCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Finalizar Compra</h3>
+                <button class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm">
+                    <div class="form-section">
+                        <h4>Dados Pessoais</h4>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" name="telefone" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Endereço de Entrega</h4>
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                            <div id="cepMessage" class="cep-message" aria-live="polite"></div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="endereco">Rua *</label>
+                                <input type="text" id="endereco" name="endereco" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="numero">Número *</label>
+                                <input type="text" id="numero" name="numero" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bairro">Bairro *</label>
+                                <input type="text" id="bairro" name="bairro" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cidade">Cidade *</label>
+                                <input type="text" id="cidade" name="cidade" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="uf">UF *</label>
+                            <input type="text" id="uf" name="uf" readonly required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Forma de Pagamento</h4>
+                        <div class="payment-methods">
+                            <div class="payment-option">
+                                <input type="radio" id="pix" name="payment" value="pix" required>
+                                <label for="pix" class="payment-label">
+                                    <i class="fas fa-qrcode"></i>
+                                    <div class="payment-info">
+                                        <span class="payment-title">PIX</span>
+                                        <span class="payment-desc">Aprovação instantânea</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="cartao" name="payment" value="cartao" required>
+                                <label for="cartao" class="payment-label">
+                                    <i class="fas fa-credit-card"></i>
+                                    <div class="payment-info">
+                                        <span class="payment-title">Cartão de Crédito</span>
+                                        <span class="payment-desc">Parcelamento em até 12x</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="boleto" name="payment" value="boleto" required>
+                                <label for="boleto" class="payment-label">
+                                    <i class="fas fa-barcode"></i>
+                                    <div class="payment-info">
+                                        <span class="payment-title">Boleto Bancário</span>
+                                        <span class="payment-desc">Vencimento em 3 dias úteis</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-secondary" onclick="uiManager.closeModal('checkoutModal'); uiManager.openModal('cartModal')">Voltar ao Carrinho</button>
+                <button type="submit" form="checkoutForm" class="btn-primary">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import ProductCatalog from './js/ProductCatalog.js';
+        import ShoppingCart from './js/ShoppingCart.js';
+        import CheckoutManager from './js/CheckoutManager.js';
+        import UIManager from './js/UIManager.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            window.uiManager = new UIManager();
+            window.productCatalog = new ProductCatalog();
+            window.shoppingCart = new ShoppingCart(window.productCatalog);
+            window.checkoutManager = new CheckoutManager(window.shoppingCart, window.uiManager);
+            
+            console.log('DuoTech Farma inicializada com sucesso!');
+        });
+    </script>
+</body>
+</html>
