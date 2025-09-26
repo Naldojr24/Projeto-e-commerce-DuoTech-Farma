@@ -346,20 +346,6 @@
         </div>
     </div>
 
-    <script type="module">
-        import ProductCatalog from './js/ProductCatalog.js';
-        import ShoppingCart from './js/ShoppingCart.js';
-        import CheckoutManager from './js/CheckoutManager.js';
-        import UIManager from './js/UIManager.js';
-
-        document.addEventListener('DOMContentLoaded', () => {
-            window.uiManager = new UIManager();
-            window.productCatalog = new ProductCatalog();
-            window.shoppingCart = new ShoppingCart(window.productCatalog);
-            window.checkoutManager = new CheckoutManager(window.shoppingCart, window.uiManager);
-            
-            console.log('DuoTech Farma inicializada com sucesso!');
-        });
-    </script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 </html>
